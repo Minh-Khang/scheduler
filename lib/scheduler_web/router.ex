@@ -17,6 +17,10 @@ defmodule SchedulerWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/users", UserController
+    resources "/shifts", ShiftController
+    resources "/schedulings", SchedulingController
+    resources "/companies", CompanyController
   end
 
   # Other scopes may use custom stacks.
